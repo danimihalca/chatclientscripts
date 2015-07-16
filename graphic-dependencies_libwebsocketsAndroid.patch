@@ -1,0 +1,17 @@
+diff --git a/libwebsockets/lib/private-libwebsockets.h b/libwebsockets/lib/private-libwebsockets.h
+index f1063c5..fe2b980 100644
+--- a/libwebsockets/lib/private-libwebsockets.h
++++ b/libwebsockets/lib/private-libwebsockets.h
+@@ -127,7 +127,11 @@ struct tcp_keepalive {
+ #else
+  #include <ifaddrs.h>
+ #endif
+-#include <sys/syslog.h>
++#ifdef ANDROID
++  #include <syslog.h>
++#else
++  #include <sys/syslog.h>
++#endif //ANDROID
+ #include <sys/un.h>
+ #include <sys/socket.h>
+ #include <netdb.h>
