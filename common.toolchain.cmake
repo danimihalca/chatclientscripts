@@ -31,8 +31,12 @@ if(${TARGET_SYSTEM} MATCHES "Android")
     MESSAGE(STATUS "ANDROID ABI:" ${ANDROID_ABI})
 
 elseif(${TARGET_SYSTEM} MATCHES WindowsPhone)
+    #cmake build and install using msvc
+    # cmake --build . --target install <--config -- "/p:Platform=ARM">
     SET(CMAKE_SYSTEM_VERSION 8.1)
-    SET(CMAKE_GENERATOR "Visual Studio 12 2013 ARM" CACHE INTERNAL "" FORCE)
+    SET(CMAKE_SYSTEM_NAME ${TARGET_SYSTEM} CACHE STRING "")
+    #SET(CMAKE_GENERATOR "Visual Studio 12 2013 ARM" CACHE INTERNAL "" FORCE) #run cmake twice when set only here, lazy generator set
+    #SET(CMAKE_SHARED_LINKER_FLAGS "/machine:ARM") #not needed when setting the generator as argument
 endif()
 
 if (${PROJECT_NAME} MATCHES libwebsockets)
