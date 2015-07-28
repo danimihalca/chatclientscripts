@@ -10,3 +10,8 @@ if (${PROJECT_NAME} MATCHES libwebsockets)
     MESSAGE(STATUS "Setting default setup for libwebsockets")
     setup_libwebsockets()
 ENDIF()
+
+if (${PROJECT_NAME} MATCHES jsoncpp)
+    MESSAGE(STATUS "Setting default setup for jsoncpp")
+    setup_jsoncpp()
+ENDIF()
