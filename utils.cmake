@@ -89,3 +89,7 @@ function(setup_jsoncpp)
     SET(BUILD_SHARED_LIBS ON CACHE BOOL "")
     SET(LIB_SUFFIX /${LIBRARY_INSTALL_SUFFIX} CACHE STRING "")
 endfunction()
+
+function(setup_json_protocol_path)
+    SET(COMMON_JSON_CHAT_PROTOCOl_PATH ${WORKSPACE}/repositories/JsonChatProtocol CACHE STRING "")
+endfunction()
