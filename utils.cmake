@@ -91,5 +91,5 @@ function(setup_jsoncpp)
 endfunction()
 
 function(setup_json_protocol_path)
-    SET(COMMON_JSON_CHAT_PROTOCOl_PATH ${WORKSPACE}/repositories/JsonChatProtocol CACHE STRING "")
+    SET(CHAT_UTILS_PATH ${WORKSPACE}/repositories/ChatUtils CACHE STRING "")
 endfunction()
