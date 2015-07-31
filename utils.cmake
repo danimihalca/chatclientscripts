@@ -88,6 +88,7 @@ function(setup_jsoncpp)
     SET(BUILD_STATIC_LIBS OFF CACHE BOOL "")
     SET(BUILD_SHARED_LIBS ON CACHE BOOL "")
     SET(LIB_SUFFIX /${LIBRARY_INSTALL_SUFFIX} CACHE STRING "")
+    SET(RUNTIME_INSTALL_DIR ${LIBRARY_INSTALL_DIR} CACHE STRING "" FORCE)
 endfunction()
 
 function(setup_json_protocol_path)
