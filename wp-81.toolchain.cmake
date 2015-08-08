@@ -25,6 +25,6 @@ if (${PROJECT_NAME} MATCHES jsoncpp)
 ENDIF()
 
 if (${PROJECT_NAME} MATCHES chatServerApp OR ${PROJECT_NAME} MATCHES chatClientAPI)
-    MESSAGE(STATUS "Setting default setup for jsoncpp")
-    setup_json_protocol_path()
+    MESSAGE(STATUS "Setting default setup for chat related project")
+    setup_chat_utils_path()
 ENDIF()
